@@ -1,0 +1,30 @@
+2022-07-17 19:11:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.3.1 on joseescobar-mac with PID 27867 (/Users/joseescobar/Documents/projects/microservices-demo/twitter-to-kafka-service/target/classes started by joseescobar in /Users/joseescobar/Documents/projects/microservices-demo)
+2022-07-17 19:11:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-17 19:11:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.347 seconds (JVM running for 0.729)
+2022-07-17 19:11:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-17 19:11:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-17 19:11:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:25)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.List.toArray(Object[])" because the return value of "com.microservices.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData.getTwitterKeyword()" is null
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:31)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2022-07-17 19:14:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.3.1 on joseescobar-mac with PID 28234 (/Users/joseescobar/Documents/projects/microservices-demo/twitter-to-kafka-service/target/classes started by joseescobar in /Users/joseescobar/Documents/projects/microservices-demo)
+2022-07-17 19:14:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-17 19:14:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.303 seconds (JVM running for 0.604)
+2022-07-17 19:14:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-17 19:14:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.3.1 on joseescobar-mac with PID 36651 (/Users/joseescobar/Documents/projects/microservices-demo/twitter-to-kafka-service/target/classes started by joseescobar in /Users/joseescobar/Documents/projects/microservices-demo)
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.309 seconds (JVM running for 0.679)
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - hello world
