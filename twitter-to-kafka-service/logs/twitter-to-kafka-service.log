@@ -28,3 +28,92 @@ Caused by: java.lang.NullPointerException: Cannot invoke "java.util.List.toArray
 2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
 2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
 2022-07-17 20:35:24 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - hello world
+2022-07-19 20:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.14.1 on eduardo.local with PID 1507 (/Users/bogus/IdeaProjects/event-driven-microservices/twitter-to-kafka-service/target/classes started by bogus in /Users/bogus/IdeaProjects/event-driven-microservices)
+2022-07-19 20:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-19 20:38:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.463 seconds (JVM running for 2.853)
+2022-07-19 20:38:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-19 20:38:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2022-07-19 20:38:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - hello world
+2022-07-19 20:38:57 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-19 20:38:57 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.lang.IllegalStateException: Authentication credentials are missing. See http://twitter4j.org/en/configuration.html for details. See and register at http://apps.twitter.com/
+	at twitter4j.TwitterBaseImpl.ensureAuthorizationEnabled(TwitterBaseImpl.java:219)
+	at twitter4j.TwitterStreamImpl.filter(TwitterStreamImpl.java:325)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterKafkaStreamRunner.addFilter(TwitterKafkaStreamRunner.java:48)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterKafkaStreamRunner.start(TwitterKafkaStreamRunner.java:34)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2022-07-19 20:38:57 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.14.1 on eduardo.local with PID 1739 (/Users/bogus/IdeaProjects/event-driven-microservices/twitter-to-kafka-service/target/classes started by bogus in /Users/bogus/IdeaProjects/event-driven-microservices)
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.771 seconds (JVM running for 1.756)
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - hello world
+2022-07-19 20:57:39 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords {}[Java, Microservices, Kafka, Elasticsearch]
+2022-07-19 20:57:39 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-07-19 20:57:40 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-07-19 20:57:40 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-07-19 20:57:40 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream
+2022-07-19 22:15:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.14.1 on eduardo.local with PID 2614 (/Users/bogus/IdeaProjects/event-driven-microservices/twitter-to-kafka-service/target/classes started by bogus in /Users/bogus/IdeaProjects/event-driven-microservices)
+2022-07-19 22:15:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-07-19 22:15:01 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.428 seconds (JVM running for 3.29)
+2022-07-19 22:15:01 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-07-19 22:15:01 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2022-07-19 22:15:01 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - hello world
+2022-07-19 22:15:01 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords [Java, Microservices, Kafka, Elasticsearch]
+2022-07-19 22:15:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-19 22:15:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: org.json.JSONException: JSONObject["data"] not found.
+	at org.json.JSONObject.get(JSONObject.java:587)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
