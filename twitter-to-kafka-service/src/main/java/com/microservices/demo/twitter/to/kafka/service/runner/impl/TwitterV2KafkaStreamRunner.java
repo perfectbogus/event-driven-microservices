@@ -27,7 +27,8 @@ public class TwitterV2KafkaStreamRunner implements StreamRunner {
 
     @Override
     public void start() {
-        String bearerToken = twitterToKafkaServiceConfigData.getTwitterV2BearerToken();
+        final String bearerToken = twitterToKafkaServiceConfigData.getBearerToken();
+        LOG.info("({})", twitterToKafkaServiceConfigData);
         if (bearerToken == null) {
             final String errorMessage = "There was a problem getting your bearer token " +
                     "please make sure you set the TWITTER_BEARER_TOKEN environment variable";
