@@ -1,6 +1,6 @@
 package com.microservices.demo.twitter.to.kafka.service.runner.impl;
 
-import com.microservices.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.microservices.demo.config.TwitterToKafkaServiceConfigData;
 import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +27,7 @@ public class TwitterV2KafkaStreamRunner implements StreamRunner {
 
     @Override
     public void start() {
-        final String bearerToken = twitterToKafkaServiceConfigData.getBearerToken();
+        final String bearerToken = twitterToKafkaServiceConfigData.getTwitterBearerToken();
         LOG.info("({})", twitterToKafkaServiceConfigData);
         if (bearerToken == null) {
             final String errorMessage = "There was a problem getting your bearer token " +

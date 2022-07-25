@@ -4,6 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>twitter-to-kafka-service</module>
+        <module>app-config-data</module>
+        <module>kafka</module>
+        <module>kafka/kafka-model</module>
+        <module>kafka/kafka-admin</module>
+        <module>kafka/kafka-producer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -11,7 +16,7 @@
         <version>2.7.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>dev.perfectbogus</groupId>
+    <groupId>com.microservices.demo</groupId>
     <artifactId>microservices-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>microservices-demo</name>
@@ -26,10 +31,16 @@
         <lombok.version>1.18.24</lombok.version>
         <httpclient.version>4.5.13</httpclient.version>
         <json.version>20220320</json.version>
+        <avro.version>1.10.0</avro.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>app-config-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -61,6 +72,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro</artifactId>
+                <version>${avro.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
