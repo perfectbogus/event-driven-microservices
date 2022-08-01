@@ -18,6 +18,7 @@ retry-config:
   initial-interval-ms: 1000
   max-interval-ms: 10000
   multiplier: 2.0
+  maxAttempts: 3
   sleep-time-ms: 2000
 
 kafka-config:
@@ -39,3 +40,4 @@ kafka-producer-config:
   batch-size-boost-factor: 100
   linger-ms: 5
   request-timeout-ms: 60000
+  retry-count: 5
